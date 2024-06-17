@@ -242,7 +242,7 @@ local globalkeys = gears.table.join(
 )
 
 local clientkeys = gears.table.join(
-	awful.key({ ctrl, alt }, "Tab", function(c)
+	awful.key({ ctrl, meta }, "Tab", function(c)
 		c:move_to_screen()
 	end, { description = "move to next screen", group = "awesome: focused window" }),
 
