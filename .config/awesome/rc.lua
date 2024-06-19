@@ -190,7 +190,7 @@ local globalkeys = gears.table.join(
 		awful.client.focus.byidx(-1)
 	end, { description = "focus previous window", group = "awesome: focus" }),
 
-	awful.key({ meta }, "Tab", function()
+	awful.key({ ctrl }, "Tab", function()
 		awful.screen.focus_relative(1)
 	end, { description = "focus next screen", group = "awesome: focus" }),
 
@@ -232,7 +232,7 @@ local globalkeys = gears.table.join(
 	end, { description = "select next layout", group = "awesome: layout" }),
 
 	-- Applications
-	awful.key({ meta }, "Return", function()
+	awful.key({ ctrl }, "Return", function()
 		awful.util.spawn(launcher)
 	end, { description = "application launcher", group = "awesome: applications" }),
 
@@ -246,7 +246,7 @@ local clientkeys = gears.table.join(
 		c:move_to_screen()
 	end, { description = "move to next screen", group = "awesome: focused window" }),
 
-	awful.key({ meta }, "q", function(c)
+	awful.key({ ctrl }, "q", function(c)
 		c:kill()
 	end, { description = "close window", group = "awesome: focused window" }),
 
@@ -272,7 +272,7 @@ for i = 0, 5 do
 		globalkeys,
 
 		-- View tag only.
-		awful.key({ meta }, hotkey, function()
+		awful.key({ ctrl }, hotkey, function()
 			local screen = awful.screen.focused()
 			local tag = screen.tags[i + 1]
 			if tag then
