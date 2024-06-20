@@ -62,6 +62,7 @@ alias ls='eza'
 alias la='eza -a'
 alias ll='eza -l --git --no-user'
 alias lla='ll -a'
+alias lt='eza --tree'
 
 alias ..='cd ..'
 alias mv='mv -i'
